@@ -39,7 +39,7 @@ export interface Actions {
     { commit }: AugmentedActionContext, role: string
   ): void
   [UserActionTypes.ACTION_LOGIN_OUT](
-    { commit }: AugmentedActionContext,
+    { commit }: AugmentedActionContext, arg?: any
   ): void
 }
 

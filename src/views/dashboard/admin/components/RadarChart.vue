@@ -13,7 +13,14 @@
   />
 </template>
 <script lang="ts">
-import { defineComponent, onActivated, onBeforeUnmount, onDeactivated, onMounted, nextTick } from 'vue'
+import {
+  defineComponent,
+  onActivated,
+  onBeforeUnmount,
+  onDeactivated,
+  onMounted,
+  nextTick
+} from 'vue'
 import resize from '@/components/charts/mixins/resize'
 import { init } from 'echarts'
 
@@ -36,16 +43,13 @@ export default defineComponent({
     }
   },
   setup() {
-    const {
-      mounted,
-      chart,
-      beforeDestroy,
-      activated,
-      deactivated
-    } = resize()
+    const { mounted, chart, beforeDestroy, activated, deactivated } = resize()
 
     const initChart = () => {
-      const radarChart = init(document.getElementById('homeRadarCharts') as HTMLDivElement, 'macarons')
+      const radarChart = init(
+        document.getElementById('homeRadarCharts') as HTMLDivElement,
+        'macarons'
+      )
       radarChart.setOption({
         tooltip: {
           trigger: 'axis',
@@ -82,33 +86,35 @@ export default defineComponent({
           bottom: '10',
           data: ['Allocated Budget', 'Expected Spending', 'Actual Spending']
         },
-        series: [{
-          color: ['#435EBE', '#5DDAB4', '#57CAEB'],
-          type: 'radar',
-          symbolSize: 0,
-          areaStyle: {
-            shadowBlur: 13,
-            shadowColor: 'rgba(0,0,0,.2)',
-            shadowOffsetX: 0,
-            shadowOffsetY: 10,
-            opacity: 1
-          },
-          data: [
-            {
-              value: [5000, 7000, 12000, 11000, 15000, 14000],
-              name: 'Allocated Budget'
+        series: [
+          {
+            color: ['#435EBE', '#5DDAB4', '#57CAEB'],
+            type: 'radar',
+            symbolSize: 0,
+            areaStyle: {
+              shadowBlur: 13,
+              shadowColor: 'rgba(0,0,0,.2)',
+              shadowOffsetX: 0,
+              shadowOffsetY: 10,
+              opacity: 1
             },
-            {
-              value: [4000, 9000, 15000, 15000, 13000, 11000],
-              name: 'Expected Spending'
-            },
-            {
-              value: [5500, 11000, 12000, 15000, 12000, 12000],
-              name: 'Actual Spending'
-            }
-          ],
-          animationDuration: animationDuration
-        }]
+            data: [
+              {
+                value: [5000, 7000, 12000, 11000, 15000, 14000],
+                name: 'Allocated Budget'
+              },
+              {
+                value: [4000, 9000, 15000, 15000, 13000, 11000],
+                name: 'Expected Spending'
+              },
+              {
+                value: [5500, 11000, 12000, 15000, 12000, 12000],
+                name: 'Actual Spending'
+              }
+            ],
+            animationDuration: animationDuration
+          }
+        ]
       } as any)
       chart.value = radarChart
     }
@@ -137,9 +143,7 @@ export default defineComponent({
       deactivated()
     })
 
-    return {
-
-    }
+    return {}
   }
 })
 </script>

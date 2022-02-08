@@ -117,15 +117,26 @@
       </label>
     </div>
     <aside>
-      &lt;count-to :start-val=&#x27;{{ startVal }}&#x27; :end-val=&#x27;{{ endVal }}&#x27; :duration=&#x27;{{ duration }}&#x27;
-      :decimals=&#x27;{{ decimals }}&#x27; :separator=&#x27;{{ separator }}&#x27; :prefix=&#x27;{{ prefix }}&#x27; :suffix=&#x27;{{ suffix }}&#x27;
-      :autoplay=false&gt;
+      &lt;count-to :start-val=&#x27;{{ startVal }}&#x27; :end-val=&#x27;{{
+        endVal
+      }}&#x27; :duration=&#x27;{{ duration }}&#x27; :decimals=&#x27;{{
+        decimals
+      }}&#x27; :separator=&#x27;{{ separator }}&#x27; :prefix=&#x27;{{
+        prefix
+      }}&#x27; :suffix=&#x27;{{ suffix }}&#x27; :autoplay=false&gt;
     </aside>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, getCurrentInstance, reactive, ref, toRefs } from 'vue'
+import {
+  computed,
+  defineComponent,
+  getCurrentInstance,
+  reactive,
+  ref,
+  toRefs
+} from 'vue'
 import { CountTo } from 'vue3-count-to'
 
 export default defineComponent({
@@ -188,10 +199,10 @@ export default defineComponent({
     const countRef = ref(null)
     const startCount = () => {
       console.log(ctx.$refs)
-      // ctx.$refs.count && (ctx.$refs.count as any).start()
+      ctx.$refs.count && (ctx.$refs.count as any).start()
     }
     const pauseResume = () => {
-      // countRef.value && (countRef.value as any).pauseResume()
+      countRef.value && (countRef.value as any).pauseResume()
     }
     return {
       startVal,

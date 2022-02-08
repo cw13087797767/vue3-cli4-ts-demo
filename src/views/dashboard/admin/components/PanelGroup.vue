@@ -21,9 +21,7 @@
         @click="handleSetLineChartData('newVisitis')"
       >
         <div class="card-panel-icon-wrapper icon-people">
-          <img
-            :src="visits"
-          >
+          <img :src="visits">
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
@@ -50,9 +48,7 @@
         @click="handleSetLineChartData('messages')"
       >
         <div class="card-panel-icon-wrapper icon-message">
-          <img
-            :src="messages"
-          >
+          <img :src="messages">
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
@@ -78,9 +74,7 @@
         @click="handleSetLineChartData('purchases')"
       >
         <div class="card-panel-icon-wrapper icon-money">
-          <img
-            :src="purchases"
-          >
+          <img :src="purchases">
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
@@ -106,9 +100,7 @@
         @click="handleSetLineChartData('shoppings')"
       >
         <div class="card-panel-icon-wrapper icon-shopping">
-          <img
-            :src="shoppings"
-          >
+          <img :src="shoppings">
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
@@ -176,13 +168,13 @@ export default defineComponent({
     overflow: hidden;
     color: #666;
     background: #fff;
-    box-shadow: 4px 4px 40px rgba(0, 0, 0, .05);
-    border-color: rgba(0, 0, 0, .05);
+    box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.05);
     height: 124px;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 10px;
-    img{
-      width:60px;
+    img {
+      width: 60px;
       height: 60px;
       display: inline-block;
     }
@@ -199,7 +191,7 @@ export default defineComponent({
     }
 
     .icon-shopping {
-      color: #34bfa3
+      color: #34bfa3;
     }
 
     .card-panel-icon-wrapper {
@@ -235,7 +227,7 @@ export default defineComponent({
   }
 }
 
-@media (max-width:550px) {
+@media (max-width: 550px) {
   .card-panel-description {
     display: none;
   }

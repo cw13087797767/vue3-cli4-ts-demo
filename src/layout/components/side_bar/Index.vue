@@ -51,6 +51,7 @@ export default defineComponent({
   },
   setup() {
     const store = useStore()
+    console.log('store', store)
     const route = useRoute()
     const sidebar = computed(() => {
       return store.state.app.sidebar
@@ -75,7 +76,7 @@ export default defineComponent({
 
     const activeMenu = computed(() => {
       const { meta, path } = route
-      if (meta !== null || meta !== undefined) {
+      if (meta !== null && meta !== undefined) {
         if (meta.activeMenu) {
           return meta.activeMenu
         }

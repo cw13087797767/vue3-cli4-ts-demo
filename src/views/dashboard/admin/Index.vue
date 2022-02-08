@@ -9,7 +9,9 @@
   <div class="dashboard-editor-container">
     <GithubCorner class="github-corner" />
     <PanelGroup @handle-set-line-chart-data="handleSetLineChartData" />
-    <el-row style="background:#fff;padding:16px 16px 0;margin-bottom:32px;border-radius: 8px;">
+    <el-row
+      style="background:#fff;padding:16px 16px 0;margin-bottom:32px;border-radius: 8px;"
+    >
       <LineChart :chart-data="lineChartData" />
     </el-row>
 
@@ -137,7 +139,7 @@ export default {
     }
 
     const lineChartData = ref(data.newVisitis)
-    const handleSetLineChartData = (type) => {
+    const handleSetLineChartData = type => {
       lineChartData.value = data[type]
     }
 
@@ -152,10 +154,10 @@ export default {
 <style lang="scss" scoped>
 .dashboard-editor-container {
   padding: 32px;
-  background-color: #F2F7FF;
+  background-color: #f2f7ff;
   position: relative;
 
-  .github-corner{
+  .github-corner {
     position: absolute;
     top: 0px;
     border: 0;
@@ -170,7 +172,7 @@ export default {
   }
 }
 
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .chart-wrapper {
     padding: 8px;
   }
