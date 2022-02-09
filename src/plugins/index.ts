@@ -1,9 +1,9 @@
 /*
- * @Description: 加载插件文件
- * @Author: ZY
- * @Date: 2020-12-19 11:53:00
- * @LastEditors: ZY
- * @LastEditTime: 2020-12-23 16:49:30
+ * @Description: 加载插件
+ * @Author: chenwei
+ * @Date: 2022-02-08 10:50:06
+ * @Last Modified by: chenwei
+ * @Last Modified time: 2022-02-08 10:51:06
  */
 import { createApp } from 'vue'
 

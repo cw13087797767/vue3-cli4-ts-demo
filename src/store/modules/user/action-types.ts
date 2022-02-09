@@ -1,9 +1,9 @@
 /*
- * @Description: app actions type
- * @Author: ZY
- * @Date: 2020-12-23 10:25:37
- * @LastEditors: ZY
- * @LastEditTime: 2020-12-25 10:55:13
+ * @Description: 文件描述
+ * @Author: chenwei
+ * @Date: 2022-02-08 10:47:20
+ * @Last Modified by: chenwei
+ * @Last Modified time: 2022-02-08 10:47:20
  */
 
 export enum UserActionTypes {
@@ -11,5 +11,5 @@ export enum UserActionTypes {
   ACTION_RESET_TOKEN = 'ACTION_RESET_TOKEN',
   ACTION_GET_USER_INFO = 'ACTION_GET_USER_INFO',
   ACTION_CHANGE_ROLES = 'ACTION_CHANGE_ROLES',
-  ACTION_LOGIN_OUT = 'ACTION_LOGIN_OUT',
+  ACTION_LOGIN_OUT = 'ACTION_LOGIN_OUT'
 }
